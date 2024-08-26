@@ -85,7 +85,16 @@ body {
     width: 100%;
 }
 
-.form-container label input {
+.form-container label input[type="text"] {
+    margin-left: 10px;
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.form-container label input[type="checkbox"] {
     margin-right: 10px;
     transform: scale(1.5);
 }
