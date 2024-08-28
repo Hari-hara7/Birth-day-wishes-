@@ -1,62 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Harshith!</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="birthday-wishes">
-        <h1>Happy Birthday, Harshith!</h1>
-        <p>We're here to celebrate your special day with some crazy fun options!</p>
-        <button onclick="openForm()">Choose Your Fun</button>
-    </div>
+  <div class="birthday-wishes">
+    <h1>Happy Birthday, Harshith!</h1>
+    <p>We're here to celebrate your special day with some crazy fun options!</p>
+    <button onclick="openForm()">Choose Your Crazy Birthday Fun</button>
+  </div>
 
-    <div id="popupForm" class="popup-form">
-        <div class="form-container">
-            <span class="close-button" onclick="closeForm()">×</span>
-            <h2>Pick Your Crazy Birthday Fun Harshith!</h2>
-            <form action="https://usebasin.com/f/dbb9b43a9803" method="POST">
-                <label>
-                    Your Name:
-                    <input type="text" name="name" required>
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Egg Shampoo"> Egg Shampoo
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Soap"> Soap
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Foam"> Foam
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Cake"> Cake
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Juice"> Juice
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Water"> Water
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Mud"> Mud
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Corn Powder"> Corn Powder
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Spoiled Rice"> Spoiled Rice
-                </label>
-                <label>
-                    <input type="checkbox" name="option" value="Other"> Other Crazy Things
-                </label>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+  <div id="popupForm" class="popup-form">
+    <div class="form-container">
+      <span class="close-button" onclick="closeForm()">×</span>
+      <h2>Pick Your Crazy Birthday Fun Harshith!</h2>
+      <form action="https://usebasin.com/f/dbb9b43a9803" method="POST">
+        <label>
+          Your Name:
+          <input type="text" name="name" required>
+        </label>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <label>
+          <input type="checkbox" name="option[]" value="detergent"> Detergent
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="comfort"> Comfort
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Spoiled Curd"> Spoiled Curd
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="maida flour"> Maida Flour
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="perfume for hair"> Perfume for Hair
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Ujala"> Ujala
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Wax"> Wax
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Fevicol"> Fevicol
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Socks"> Socks
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Shoes"> Shoes
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Shining colours"> Shining Colours
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Egg with Surf"> Egg with Surf
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Tooth paste with Eno"> Tooth Paste with Eno
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Gultier"> Gultier
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Mud Water"> Mud Water
+        </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Egg Shampoo"> Egg Shampoo  </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Soap"> Soap  </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Foam"> Foam  </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Cake"> Cake  </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Juice"> Juice  </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Water"> Water  </label>
+        <label>
+          <input type="checkbox" name="option[]" value="Other"> Other Crazy Things
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</

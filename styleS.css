@@ -1,145 +1,211 @@
-/* styles.css */
+/* Base Styles */
 body {
+    margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
-    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-}
-
-.birthday-wishes {
+    overflow: hidden;
+  }
+  
+  .birthday-wishes {
     text-align: center;
-    background-color: #ffe6e6;
+    background-color: #ffeb3b;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.birthday-wishes h1 {
-    font-size: 3em;
-    color: #ff4d4d;
-}
-
-.birthday-wishes button {
-    background-color: #ff4d4d;
-    color: white;
-    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    max-width: 90%;
+    margin: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0 20px;
+  }
+  
+  button {
+    background-color: #333;
+    color: #ffeb3b;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.2em;
-}
-
-.birthday-wishes button:hover {
-    background-color: #ff6666;
-}
-
-.popup-form {
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Popup Form Styles */
+  .popup-form {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-}
-
-.form-container {
-    background: linear-gradient(135deg, #f78ca0, #f9748f, #fd868c, #fe9a8b);
+    animation: fadeIn 0.5s ease-in-out;
+    overflow-y: auto;
+  }
+  
+  .form-container {
+    background-color: white;
     padding: 30px;
-    border-radius: 15px;
-    text-align: center;
+    border-radius: 12px;
+    max-width: 500px;
     width: 90%;
-    max-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    color: white;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
     position: relative;
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-    font-size: 1.8em;
-}
-
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.form-container label {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.form-container label input[type="text"] {
-    margin-left: 10px;
-    flex: 1;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-}
-
-.form-container label input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.5);
-}
-
-.form-container button {
-    margin-top: 10px;
-    padding: 12px 24px;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1.1em;
-    width: 100%;
-}
-
-.form-container button:hover {
-    background-color: #ff6666;
-}
-
-.close-button {
+    animation: slideIn 0.5s ease-out;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  .close-button {
     position: absolute;
     top: 10px;
-    right: 15px;
-    font-size: 1.5em;
+    right: 10px;
+    font-size: 24px;
     cursor: pointer;
-    color: white;
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-    .birthday-wishes h1 {
-        font-size: 2.5em;
-    }
-
-    .birthday-wishes button {
-        font-size: 1em;
-        padding: 8px 16px;
-    }
-
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #ffeb3b;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+  }
+  
+  button[type="submit"] {
+    background-color: #333;
+    color: #ffeb3b;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Scrollbar Styling */
+  .popup-form::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .popup-form::-webkit-scrollbar-thumb {
+    background-color: #ffeb3b;
+    border-radius: 8px;
+  }
+  
+  .popup-form::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
     .form-container {
-        width: 95%;
+      padding: 20px;
+      max-width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
     }
-
-    .form-container h2 {
-        font-size: 1.5em;
+  
+    h1 {
+      font-size: 2rem;
     }
-}
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    button, button[type="submit"] {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    input[type="text"] {
+      font-size: 0.9rem;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
