@@ -63,20 +63,30 @@ body {
     animation: fadeIn 0.5s ease-in-out;
     overflow-y: auto;
   }
-  
   .form-container {
-    background-color: white;
+    background: url('1600w-TyD7T10TAnM.webp') no-repeat center center; /* Adds the background image */
+    background-size: cover; /* Ensures the image covers the entire container */
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 20px; /* Softer corners */
     max-width: 500px;
     width: 90%;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
     text-align: center;
     position: relative;
     animation: slideIn 0.5s ease-out;
     max-height: 80%;
     overflow-y: auto;
+    backdrop-filter: blur(10px); /* Adds blur to the background */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+    color: white; /* Ensures text is readable on the background image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  
+  .form-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  }
+  
   
   .close-button {
     position: absolute;
